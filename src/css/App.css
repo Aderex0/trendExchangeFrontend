@@ -1,0 +1,6 @@
+.box-frame {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 10% 1fr;
+  grid-template-columns: 1fr 45% 45% 1fr;
+}

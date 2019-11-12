@@ -1,0 +1,59 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.owned-trend-info-box {
+    border-bottom: 2px rgb(136, 202, 255) solid;
+    background-color:rgb(215, 237, 255);
+}
+
+.owned-trend-info {
+    border-bottom: 1px rgb(136, 202, 255) solid;
+}
+
+.owned-trend-info:hover {
+    border-bottom: 1px rgb(136, 202, 255) solid;
+    background-color: rgb(111, 190, 255);
+    transition: 0.8s;
+}
+
+
+.owned-trend-info h3 {
+    padding-top: 3%;
+    margin-left: 7%;
+}
+
+.owned-trend-info p {
+    margin-bottom: 2%;
+    margin-left: 7%;
+}
+
+.sell-form {
+    height: 5vh;
+}
+
+.sell {
+    border: none;
+    height: 100%;
+    width: 30%;
+    background-color:rgb(215, 237, 255);
+}
+
+.sell:hover {
+    border: none;
+    height: 100%;
+    width: 30%;
+    background-color: rgb(111, 190, 255);
+    transition: 0.8s;
+}
+
+.sell-amount {
+    height: 100%;
+    border-left: 0.5px rgb(136, 202, 255) solid;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    width: 20%;
+    text-align: center;
+}

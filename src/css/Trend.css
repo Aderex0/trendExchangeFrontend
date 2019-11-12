@@ -1,0 +1,139 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.trend-box {
+    height: 100%;
+    margin-bottom: 1%;
+    float: right;
+    width: 55%;
+    border-bottom-left-radius: 6% 20%;
+    border-top-right-radius: 6% 20%;
+    border-bottom-right-radius: 6% 20%;
+    background-color:rgb(215, 237, 255);
+    border: 0.5px rgb(136, 202, 255) solid;
+    overflow: hidden;
+}
+
+#trend-info p {
+    padding-bottom: 5%;
+    margin-left: 10%;
+    font-family: Helvetica, sans-serif;
+
+}
+
+#trend-info h3 {
+    padding-top: 5%;
+    margin-left: 10%;
+    font-family: Helvetica, sans-serif;
+}
+
+#trend-info {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 0.5px rgb(136, 202, 255) solid;
+}
+
+#trend-info:hover {
+    background-color: rgb(111, 190, 255);
+    transition: 0.8s;
+}
+
+#form {
+    height: 6vh;
+}
+
+
+#number {
+    height: 100%;
+    border-left: 0.5px rgb(136, 202, 255) solid;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    width: 20%;
+    text-align: center;
+}
+
+#buy {
+    border: none;
+    height: 100%;
+    width: 30%;
+    background-color:rgb(215, 237, 255);
+}
+
+#buy:hover {
+    background-color: rgb(111, 190, 255);
+    transition: 0.8s;
+}
+
+/* TREND DETAILS */
+
+.trend-details {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    bottom: 0;
+    border: 0.5px rgb(136, 202, 255) solid;
+    border-top: 10px rgb(136, 202, 255) solid;
+    border-bottom-left-radius: 16% 10%;
+    border-bottom-right-radius: 16% 10%;
+    width: 39%;
+    margin-left: 3%;
+    float: left;
+    height: 55vh;
+}
+
+#basic-trend-info h3 {
+    margin-top: 3%;
+    margin-left: 13%;
+}
+
+#basic-trend-info p {
+    margin-left: 13%;
+}
+
+#basic-trend-info a {
+    margin-left: 13%;
+}
+
+#detail-form {
+    margin-top: 10%;
+    margin-left: 13%;
+}
+
+label {
+    height: 50%;
+    width: 25%;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: bold;
+    background-color:rgb(215, 237, 255);
+    border: 1px rgb(136, 202, 255) solid;
+    margin: 1%;
+    text-align: center;
+    line-height: 9vh;
+}
+
+input[type=radio] {
+    visibility: hidden;
+    display: none;
+}
+
+input[type=radio]:checked + label{
+    background: rgb(111, 190, 255);
+}
+
+#buy-detail {
+    height: 9.2vh;
+    border: 1px rgb(136, 202, 255) solid;
+    background-color:rgb(215, 237, 255);
+    width: 82%;
+    margin: 1%;
+    color: green;
+    font-size: 1rem;
+    font-weight: bold;
+    border-bottom-left-radius: 10% 20%;
+    border-bottom-right-radius: 10% 20%;
+}

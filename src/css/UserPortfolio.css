@@ -1,0 +1,27 @@
+.user-portfolio {
+    grid-area: 1 / 3 /3 / 4;
+    margin-top: 14.5%;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    height: 50%;
+}
+
+.user-portfolio h1 {
+    float: right;
+    margin-right: 5%;
+    font-family: Helvetica, sans-serif;
+    color: cornflowerblue;
+    font-weight: 530;
+}
+
+.owned-trend-box {
+    float: right;
+    border: 0.5px rgb(136, 202, 255) solid;
+    width: 90%;
+    margin-right: 5%;
+    height: 40vh;
+    border-top-left-radius: 6% 8%;
+    border-bottom-left-radius: 6% 8%;
+    overflow: scroll;
+}

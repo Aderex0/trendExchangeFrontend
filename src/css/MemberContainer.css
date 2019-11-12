@@ -1,0 +1,8 @@
+.member-container {
+    grid-area: 2 / 2 / 3 / 4;
+    background-color: aliceblue;
+    
+    display: grid;
+    grid-template-columns: 25% 35% 1fr;
+    grid-template-rows: 30%;
+}
