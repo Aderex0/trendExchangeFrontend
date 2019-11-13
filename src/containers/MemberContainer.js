@@ -13,7 +13,11 @@ class MemberContainer extends React.PureComponent {
     }
 
     componentDidMount() {
-        API.getTrends().then(trends => this.setState({ trends }))
+        if (!this.props.loggedUser) {
+            this.props.history.push('/')
+        } else {
+            API.getTrends().then(trends => this.setState({ trends }))
+        }
     }
 
     toggleDetails = trend => {

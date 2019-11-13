@@ -1,10 +1,12 @@
 import React from 'react'
 import '../css/Header.css'
 
-function Header() {
+const Header = ({ username, logOut }) => {
+
     return (
         <div className="header">
-
+            { username && <p>Welcome {username}!</p> }
+            <button onClick={() => logOut()}>Logout</button>
         </div>
     )
 }
