@@ -34,7 +34,8 @@ class MemberContainer extends React.PureComponent {
         let quantity = e.target[1].value
         
         API.buyTrends(boughtTrend, userId, quantity)
-        API.getUserPortfolio(this.props.loggedUser).then(ownedTrends => this.setState({ownedTrends}))
+        .then(ownedTrend => this.setState({ownedTrends: [...this.state.ownedTrends, ownedTrend]}))
+        // API.getUserPortfolio(this.props.loggedUser).then(ownedTrends => this.setState({ownedTrends}))
     }
     
     render() {

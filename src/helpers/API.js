@@ -12,7 +12,7 @@ const getTrends = () => fetch(TRENDS).then(resp => resp.json())
 //BUY TRENDS
 const buyTrends = (trendDetails, userId, quantity) => {
     
-    fetch(OWNEDTRENDS, {
+    return fetch(OWNEDTRENDS, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
