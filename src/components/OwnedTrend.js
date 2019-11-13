@@ -9,7 +9,7 @@ class OwnedTrend extends React.PureComponent {
     return (
         <>
             <div className="owned-trend-info-box">
-                <div className="owned-trend-info">
+                <div onClick={this.props.showDetails} className="owned-trend-info">
                     <h3>{name}</h3>
                     <p>{tweet_volume ? tweet_volume : "New"}</p>
                 </div>
@@ -18,6 +18,9 @@ class OwnedTrend extends React.PureComponent {
                     <input className="sell-amount" type="number" defaultValue="1"></input>
                 </form>
             </div>
+            {this.props.trend
+                  
+            }
         </>
     )
     }

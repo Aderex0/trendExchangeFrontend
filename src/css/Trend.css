@@ -73,7 +73,7 @@
 .trend-details {
     position: sticky;
     position: -webkit-sticky;
-    top: 0;
+    top: 38px;
     bottom: 0;
     border: 0.5px rgb(136, 202, 255) solid;
     border-top: 10px rgb(136, 202, 255) solid;

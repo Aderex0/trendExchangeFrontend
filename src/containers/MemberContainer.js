@@ -9,7 +9,8 @@ class MemberContainer extends React.PureComponent {
     state = {
         trends: [],
         showDetails: null,
-        ownedTrends: []
+        ownedTrends: [],
+        showOwnedTrendDetails: null
     }
 
     componentDidMount() {
@@ -24,6 +25,12 @@ class MemberContainer extends React.PureComponent {
     toggleDetails = trend => {
         this.setState({ 
             showDetails: trend
+        })
+    }
+
+    toggleOwnedTrendDetails = trend => {
+        this.setState({
+            showOwnedTrendDetails: trend
         })
     }
 
@@ -43,9 +50,12 @@ class MemberContainer extends React.PureComponent {
                     < LiveTrends trends={this.state.trends} 
                                  showDetails={this.state.showDetails}
                                  toggleDetails={this.toggleDetails}
-                                 buyTrend={this.buyTrend}/>
+                                 buyTrend={this.buyTrend}
+                                 />
 
                     < UserPortfolio ownedTrends={this.state.ownedTrends}
+                                    toggleOwnedTrendDetails={this.toggleOwnedTrendDetails}
+                                    showOwnedTrendDetails={this.props.showOwnedTrendDetails}
                                     />
                 </div>
         )

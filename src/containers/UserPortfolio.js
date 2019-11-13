@@ -21,8 +21,9 @@ class UserPortfolio extends React.PureComponent {
                     this.setState({currentValue: this.state.currentValue+=trend.current_valuation})
 
                    return < OwnedTrend key={index}
-                                 trend={trend}
-                                                />
+                                       trend={trend}
+                                       
+                                       />
                 })}
                 </div>
             </div>
