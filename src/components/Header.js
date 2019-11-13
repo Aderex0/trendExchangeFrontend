@@ -6,7 +6,7 @@ const Header = ({ username, logOut }) => {
     return (
         <div className="header">
             { username && <p>Welcome {username}!</p> }
-            <button onClick={() => logOut()}>Logout</button>
+            { username && <button onClick={() => logOut()}>Logout</button> }
         </div>
     )
 }

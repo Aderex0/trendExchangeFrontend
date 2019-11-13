@@ -3,6 +3,7 @@ const TRENDS = `${BASE_URL}/trends`
 const OWNEDTRENDS = `${BASE_URL}/owned_trends`
 const USERS = `${BASE_URL}/users`
 const USER_LOGIN = `${BASE_URL}/login`
+const USER_VALIDATION = `${BASE_URL}/validate`
 
 //GET TRENDS
 const getTrends = () => fetch(TRENDS).then(resp => resp.json())
@@ -58,11 +59,20 @@ const loginUser = userDetails => fetch(USER_LOGIN, {
 }).then(resp => resp.json())
 
 const getUserPortfolio = (user_id) => fetch(`${BASE_URL}/users/${user_id}/portfolio`).then(resp => resp.json())
+//VALIDATE USER
+
+const validateUser = () => fetch(USER_VALIDATION, {
+    headers: {
+        Authorization: localStorage.getItem('token')
+    }
+}).then(resp => resp.json())
+
 
 export default {
     getTrends,
     buyTrends,
     createUser,
     loginUser,
-    getUserPortfolio
+    getUserPortfolio,
+    validateUser
 }

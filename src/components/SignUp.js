@@ -1,6 +1,7 @@
 import React from 'react'
 import API from '../helpers/API'
 import { Link } from 'react-router-dom'
+import '../css/SignUp.css'
 
 class SignUp extends React.PureComponent {
     
