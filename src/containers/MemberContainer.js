@@ -17,6 +17,7 @@ class MemberContainer extends React.PureComponent {
             this.props.history.push('/')
         } else {
             API.getTrends().then(trends => this.setState({ trends }))
+            API.getUserPortfolio(this.props.loggedUser).then(ownedTrends => this.setState({ownedTrends}))
         }
     }
 
@@ -28,13 +29,12 @@ class MemberContainer extends React.PureComponent {
 
     buyTrend = (boughtTrend, e) => {
         e.preventDefault()
+
+        let userId = this.props.loggedUser
+        let quantity = e.target[1].value
         
-        API.buyTrends(boughtTrend).then(trend => this.setState({ 
-            ownedTrends: [
-                ...this.state.ownedTrends,
-                trend
-            ]
-        }))
+        API.buyTrends(boughtTrend, userId, quantity)
+        API.getUserPortfolio(this.props.loggedUser).then(ownedTrends => this.setState({ownedTrends}))
     }
     
     render() {
