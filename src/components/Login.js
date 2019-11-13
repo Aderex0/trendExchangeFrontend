@@ -1,6 +1,6 @@
 import React from 'react'
 import API from '../helpers/API'
-
+import '../css/Login.css'
 
 
 class Login extends React.PureComponent {
@@ -29,7 +29,7 @@ class Login extends React.PureComponent {
     
     render() {
         return (
-            <form onSubmit={(e) => this.handleSubmit(e)}>
+            <form id ="login-form" onSubmit={(e) => this.handleSubmit(e)}>
                 <input onChange={(e) => this.handleChange(e)} name="username" type="text"></input>
                 <input onChange={(e) => this.handleChange(e)} name="password" type="password"></input>
                 <input type="submit" value="Submit"></input>
