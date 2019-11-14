@@ -12,14 +12,19 @@ class UserPortfolio extends React.PureComponent {
     }
 
     render() {
+        
+
         return(
             <div className="user-portfolio">
                 <h1>Owned stock</h1>
+                <h2>Portfolio value {this.state.currentValue}$</h2>
                 <div className="owned-trend-box">
+                {this.setState({initialValue: this.state.initialValue = 0,
+                                currentValue: this.state.currentValue = 0})}
                 {this.props.ownedTrends.map((trend, index) => {
 
-                    this.setState({initialValue: this.state.initialValue+=trend.initial_valuation})
-                    this.setState({currentValue: this.state.currentValue+=trend.current_valuation})
+                    this.setState({currentValue: this.state.currentValue+=trend.current_valuation, 
+                                   initialValue: this.state.initialValue+=trend.initial_valuation})
 
                    return < OwnedTrend key={index}
                                        trend={trend}
@@ -28,6 +33,11 @@ class UserPortfolio extends React.PureComponent {
                 })}
                 </div>
                 < OwnedTrendDetails showOwnedTrendDetails={this.props.showOwnedTrendDetails} />
+                                 trend={trend}
+                                 sellTrend={(e) => this.props.sellTrend(trend, e)}
+                                                />
+                })}
+                </div>
             </div>
         )
     }

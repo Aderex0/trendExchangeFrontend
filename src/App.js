@@ -13,13 +13,15 @@ class App extends React.PureComponent {
   
   state = {
     currentUserId: null,
-    username: null
+    username: null,
+    accountBalance: 0
   }
 
   login = user => {
     this.setState({ 
       currentUserId: user.id,
-      username: user.username
+      username: user.username,
+      accountBalance: user.account_balance
     })
     localStorage.setItem('token', user.token)
   }
@@ -48,7 +50,8 @@ class App extends React.PureComponent {
     return (
       <div className = "box-frame">
         <Header logOut={this.logOut}
-                username={this.state.username} />
+                username={this.state.username}
+                accountBalance={this.state.accountBalance} />
                 
         <Route exact path="/" render={() => 
           <div id="button-location">

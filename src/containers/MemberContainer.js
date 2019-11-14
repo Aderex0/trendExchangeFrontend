@@ -41,8 +41,18 @@ class MemberContainer extends React.PureComponent {
         let quantity = e.target[1].value
         
         API.buyTrends(boughtTrend, userId, quantity)
-        .then(ownedTrend => this.setState({ownedTrends: [...this.state.ownedTrends, ownedTrend]}))
-        // API.getUserPortfolio(this.props.loggedUser).then(ownedTrends => this.setState({ownedTrends}))
+            // .then(console.log)
+            // ownedTrend => this.setState({ownedTrends: [...this.state.ownedTrends, ownedTrend]}))
+        API.getUserPortfolio(this.props.loggedUser).then(ownedTrends => this.setState({ownedTrends}))
+    }
+
+    sellTrend = (trend, e) => {
+        e.preventDefault()
+
+        API.sellTrend(trend)
+       
+            // .then(this.setState({ownedTrends: this.state.ownedTrends.filter(ownTrd => ownTrd.id != trend.id)}))
+        API.getUserPortfolio(this.props.loggedUser).then(ownedTrends => this.setState({ownedTrends}))
     }
     
     render() {
@@ -57,6 +67,7 @@ class MemberContainer extends React.PureComponent {
                     < UserPortfolio ownedTrends={this.state.ownedTrends}
                                     toggleOwnedTrendDetails={this.toggleOwnedTrendDetails}
                                     showOwnedTrendDetails={this.state.showOwnedTrendDetails}
+                                    sellTrend={this.sellTrend}
                                     />
                 </div>
         )
