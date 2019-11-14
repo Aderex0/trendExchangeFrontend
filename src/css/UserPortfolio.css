@@ -4,7 +4,7 @@
     position: sticky;
     position: -webkit-sticky;
     top: 0;
-    height: 50%;
+    height: 10%;
 }
 
 .user-portfolio h1 {
@@ -20,6 +20,7 @@
     border: 0.5px rgb(136, 202, 255) solid;
     width: 90%;
     margin-right: 5%;
+    margin-bottom: 2%;
     height: 40vh;
     border-top-left-radius: 6% 8%;
     border-bottom-left-radius: 6% 8%;

@@ -11,7 +11,6 @@ const getTrends = () => fetch(TRENDS).then(resp => resp.json())
 
 //BUY TRENDS
 const buyTrends = (trendDetails, userId, quantity) => {
-    
     return fetch(OWNEDTRENDS, {
         method: "POST",
         headers: {
@@ -59,6 +58,7 @@ const loginUser = userDetails => fetch(USER_LOGIN, {
 }).then(resp => resp.json())
 
 const getUserPortfolio = (user_id) => fetch(`${BASE_URL}/users/${user_id}/portfolio`).then(resp => resp.json())
+
 //VALIDATE USER
 
 const validateUser = () => fetch(USER_VALIDATION, {

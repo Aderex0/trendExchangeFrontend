@@ -31,19 +31,21 @@
 
 .sell-form {
     height: 5vh;
+    width: 90%;
+    display: flex;
 }
 
 .sell {
     border: none;
     height: 100%;
-    width: 30%;
+    width: 25%;
     background-color:rgb(215, 237, 255);
 }
 
 .sell:hover {
     border: none;
     height: 100%;
-    width: 30%;
+    width: 25%;
     background-color: rgb(111, 190, 255);
     transition: 0.8s;
 }
@@ -56,4 +58,24 @@
     border-bottom: none;
     width: 20%;
     text-align: center;
+}
+
+.owned-trend-price {
+    width: 20%;
+    float: right;
+    margin-left: 5%;
+}
+
+.owned-trend-qty {
+    width: 20%;
+    float: right;
+}
+
+.owned-trend-price p {
+    margin-top: 12%;
+    font-size: 0.8rem;
+}
+.owned-trend-qty p {
+    margin-top: 12%;
+    font-size: 0.8rem;
 }

@@ -56,7 +56,7 @@ class MemberContainer extends React.PureComponent {
 
                     < UserPortfolio ownedTrends={this.state.ownedTrends}
                                     toggleOwnedTrendDetails={this.toggleOwnedTrendDetails}
-                                    showOwnedTrendDetails={this.props.showOwnedTrendDetails}
+                                    showOwnedTrendDetails={this.state.showOwnedTrendDetails}
                                     />
                 </div>
         )

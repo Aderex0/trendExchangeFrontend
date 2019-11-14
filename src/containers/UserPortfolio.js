@@ -1,11 +1,12 @@
 import React from 'react'
 import '../css/UserPortfolio.css'
 import OwnedTrend from '../components/OwnedTrend'
+import OwnedTrendDetails from '../components/OwnedTrendDetails'
 
 
 class UserPortfolio extends React.PureComponent {
 
-    state={
+    state = {
         initialValue: 0,
         currentValue: 0
     }
@@ -22,10 +23,11 @@ class UserPortfolio extends React.PureComponent {
 
                    return < OwnedTrend key={index}
                                        trend={trend}
-                                       
+                                       toggleOwnedTrendDetails={(e) => this.props.toggleOwnedTrendDetails(trend, e)}
                                        />
                 })}
                 </div>
+                < OwnedTrendDetails showOwnedTrendDetails={this.props.showOwnedTrendDetails} />
             </div>
         )
     }

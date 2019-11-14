@@ -1,0 +1,70 @@
+.owned-trend-details-container {
+    border: 0.5px rgb(136, 202, 255) solid;
+    border-bottom-right-radius: 5% 5%;
+    border-bottom-left-radius: 5% 5%;
+    border-top-left-radius: 5% 5%;
+    width: 90%;
+    margin-left: 5%;
+    height: 52%;
+    overflow: hidden;
+}
+
+.owned-trend-details-box {
+    border-bottom: 1px rgb(136, 202, 255) solid;
+}
+
+.owned-trend-details-box h3 {
+    margin-top: 3%;
+    margin-left: 7%;
+    font-family: Helvetica, sans-serif;
+}
+
+.owned-trend-details-box p {
+    margin-left: 7%;
+    margin-top: 2.5%;
+    font-family: Helvetica, sans-serif;
+    font-size: 0.95rem;
+}
+
+.owned-trend-details-box p:last-child {
+    margin-bottom: 3%;
+}
+
+.owned-detail-form label {
+    float: right;
+    width: 25%;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: bold;
+    background-color:rgb(215, 237, 255);
+    border: 1px rgb(136, 202, 255) solid;
+    text-align: center;
+    line-height: 6vh;
+}
+
+.owned-detail-form {
+    width: 100%;
+}
+
+.owned-detail-form input[type=radio] {
+    visibility: hidden;
+    display: none;
+}
+
+.owned-detail-form input[type=radio]:checked + label{
+    background: rgb(111, 190, 255);
+}
+
+#owned-detail-form-sell {
+    border: none;
+    background-color:rgb(215, 237, 255);
+    color: green;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 23%;
+    height: 13vh;
+    float: left;
+    overflow: hidden;
+    z-index: -1;
+}
+
