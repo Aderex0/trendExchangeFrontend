@@ -34,6 +34,14 @@ const buyTrends = (trendDetails, userId, quantity) => {
 ).then(resp => resp.json())
 }
 
+const sellTrend = (trend) => {
+    
+    return fetch(`${BASE_URL}/owned_trends/${trend.id}`, {
+    
+        method: "DELETE"
+            })
+}
+
 
 //CREATE NEW USER
 const createUser = userDetails => fetch(USERS, {
@@ -74,5 +82,6 @@ export default {
     createUser,
     loginUser,
     getUserPortfolio,
-    validateUser
+    validateUser,
+    sellTrend
 }
