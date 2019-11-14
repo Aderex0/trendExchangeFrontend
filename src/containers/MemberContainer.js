@@ -50,9 +50,13 @@ class MemberContainer extends React.PureComponent {
         e.preventDefault()
 
         API.sellTrend(trend)
-       
+        const displayTrend = trend === this.state.showOwnedTrendDetails ?  null : this.state.showOwnedTrendDetails
+        
             // .then(this.setState({ownedTrends: this.state.ownedTrends.filter(ownTrd => ownTrd.id != trend.id)}))
-        API.getUserPortfolio(this.props.loggedUser).then(ownedTrends => this.setState({ownedTrends}))
+        API.getUserPortfolio(this.props.loggedUser).then(ownedTrends => this.setState({
+            ownedTrends: ownedTrends,
+            showOwnedTrendDetails: displayTrend
+        }))
     }
     
     render() {
