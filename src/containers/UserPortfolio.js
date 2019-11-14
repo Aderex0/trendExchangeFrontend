@@ -1,11 +1,12 @@
 import React from 'react'
 import '../css/UserPortfolio.css'
 import OwnedTrend from '../components/OwnedTrend'
+import OwnedTrendDetails from '../components/OwnedTrendDetails'
 
 
 class UserPortfolio extends React.PureComponent {
 
-    state={
+    state = {
         initialValue: 0,
         currentValue: 0
     }
@@ -16,7 +17,7 @@ class UserPortfolio extends React.PureComponent {
         return(
             <div className="user-portfolio">
                 <h1>Owned stock</h1>
-
+                <h2>Portfolio value {this.state.currentValue}$</h2>
                 <div className="owned-trend-box">
                 {this.setState({initialValue: this.state.initialValue = 0,
                                 currentValue: this.state.currentValue = 0})}
@@ -26,12 +27,17 @@ class UserPortfolio extends React.PureComponent {
                                    initialValue: this.state.initialValue+=trend.initial_valuation})
 
                    return < OwnedTrend key={index}
+                                       trend={trend}
+                                       toggleOwnedTrendDetails={(e) => this.props.toggleOwnedTrendDetails(trend, e)}
+                                       />
+                })}
+                </div>
+                < OwnedTrendDetails showOwnedTrendDetails={this.props.showOwnedTrendDetails} />
                                  trend={trend}
                                  sellTrend={(e) => this.props.sellTrend(trend, e)}
                                                 />
                 })}
                 </div>
-                <h1>Portfolio value {this.state.currentValue}$</h1>
             </div>
         )
     }
