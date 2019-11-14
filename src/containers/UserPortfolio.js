@@ -26,17 +26,16 @@ class UserPortfolio extends React.PureComponent {
                     this.setState({currentValue: this.state.currentValue+=trend.current_valuation, 
                                    initialValue: this.state.initialValue+=trend.initial_valuation})
 
-                   return < OwnedTrend key={index}
+                        return   < OwnedTrend key={index}
                                        trend={trend}
                                        toggleOwnedTrendDetails={(e) => this.props.toggleOwnedTrendDetails(trend, e)}
+                                       sellTrend={(e) => this.props.sellTrend(trend, e)}
                                        />
-                })}
-                </div>
-                < OwnedTrendDetails showOwnedTrendDetails={this.props.showOwnedTrendDetails} />
-                                 trend={trend}
-                                 sellTrend={(e) => this.props.sellTrend(trend, e)}
-                                                />
-                })}
+                                    })}
+                                    
+                < OwnedTrendDetails showOwnedTrendDetails={this.props.showOwnedTrendDetails}
+                                    sellTrend={(e) => this.props.sellTrend(this.props.showOwnedTrendDetails, e)}
+                                                />                          
                 </div>
             </div>
         )
