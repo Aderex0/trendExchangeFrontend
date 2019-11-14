@@ -4,3 +4,7 @@
     height: 100%;
     background-color: cornflowerblue;
 }
+
+.account {
+    grid-column-start: 3;
+}
